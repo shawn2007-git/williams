@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IESTP Valle Grande - Educación Técnica de Excelencia</title>
+    <style>
+        :root {
+            --primary: #0056b3;
+            --secondary: #6c757d;
+            --accent: #dc3545;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --success: #28a745;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            background-color: var(--dark);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 1rem 0;
+        }
+        
+        nav li {
+            margin: 0 1.5rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover, nav a.active {
+            background-color: var(--primary);
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(180, 197, 216, 0.8), rgba(0, 86, 179, 0.8)), 
+                        url('https://drive.google.com/file/d/1uQYGy5mxLeL5EoCHOUYVkVCPSDtCAHT4/view?usp=sharing');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 5rem 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        section {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        h1, h2, h3 {
+            color: var(--primary);
+        }
+
+        .hero h2 {
+            color: white !important;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+        
+        .btn:hover {
+            background-color: #c82333;
+            transform: translateY(-2px);
+        }
+        
+        .mission-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .card {
+            background-color: var(--light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .contact-info {
+            background-color: var(--light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+        }
+        
+        .contact-info p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-info a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        /* Animaciones */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animated {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 0.5rem 0;
+            }
+            
+            .mission-vision {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                color: white;
+            }
+        }
+        header h1 {
+            color: white !important;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Instituto de Educación Superior Tecnológico Público Valle Grande</h1>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#inicio" class="active">Inicio</a></li>
+            <li><a href="#quienes-somos">Quiénes Somos</a></li>
+            <li><a href="#mision-vision">Misión y Visión</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h2>Formación técnica profesional de excelencia</h2>
+            <p>Contribuyendo al desarrollo del Perú desde 1965</p>
+            <a href="#contacto" class="btn">Contáctanos</a>
+        </div>
+    </section>
+    
+    <div class="container">
+        <section id="quienes-somos" class="animated">
+            <h2>Bienvenidos a Valle Grande</h2>
+            
+            <article>
+                <h3>Quiénes somos</h3>
+                <p>Valle Grande es actualmente un Centro de Educación Superior constituido por la Promotora de Obras Sociales y de Instrucción Popular (PROSIP) el 25 de febrero de 1965, reconocido por el Ministerio de Agricultura mediante Resolución Directoral N° 04383-AG-DGAG del 2 de junio de 1983 y por el Ministerio de Educación mediante Resolución Ministerial N°0751-92-ED.</p>
+                
+                <h3>Desarrollo histórico</h3>
+                <p>Han transcurrido casi 50 años de trabajo y continuamos con el mismo deseo, seguir contribuyendo con el bienestar de las familias de Cañete y Yauyos.</p>
+                
+                <a href="https://vallegrande.edu.pe/nosotros/" class="btn">LEER MÁS</a>
+            </article>
+        </section>
+        
+        <section id="mision-vision" class="animated">
+            <h2>Misión y Visión</h2>
+            
+            <div class="mission-vision">
+                <div class="card">
+                    <h3>Misión</h3>
+                    <p>Formar personas en el ámbito técnico profesional, considerando el sentido trascendente del hombre, desarrollando en ellos competencias, que faciliten su inserción laboral, contribuyendo de esta manera al desarrollo del país.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Visión</h3>
+                    <p>Ser una institución referente de excelencia de la educación técnico profesional del Perú, asociada al sector productivo.</p>
+                </div>
+            </div>
+            
+            <h3>Organigrama</h3>
+            <p>Conoce nuestra estructura organizacional y equipo directivo.</p>
+            <a href="https://www.youtube.com/channel/UCAy8Qkj1AQuqnKiogNdshBA" class="btn" target="_blank">Visita nuestro canal de Youtube</a>
+        </section>
+        
+        <section id="contacto" class="animated">
+            <h2>Contacto</h2>
+            
+            <div class="contact-info">
+                <p><strong>RUC:</strong> 20120099095</p>
+                <p><strong>Razón Social:</strong> I.E.S.T.P. Valle Grande</p>
+                <p><strong>Dirección:</strong> Ant. Panamericana Sur: Km. 144, San Vicente de Cañete, Lima, Perú. Apartado Postal 70.</p>
+                <p><strong>Teléfono:</strong> (01) 581-2261</p>
+                <p><strong>Email:</strong> <a href="mailto:informes@vallegrande.edu.pe">informes@vallegrande.edu.pe</a></p>
+                <p><strong>Sitio web:</strong> <a href="https://www.vallegrande.edu.pe" target="_blank">www.vallegrande.edu.pe</a></p>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 I.E.S.T.P. Valle Grande - Todos los derechos reservados</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Función para el botón "LEER MÁS"
+        document.getElementById('readMoreBtn').addEventListener('click', function() {
+            const moreContent = document.getElementById('moreContent');
+            const btn = this;
+            
+            if (moreContent.style.display === 'none') {
+                moreContent.style.display = 'block';
+                btn.textContent = 'LEER MENOS';
+            } else {
+                moreContent.style.display = 'none';
+                btn.textContent = 'LEER MÁS';
+            }
+        });
+        
+        // Efecto de scroll suave para los enlaces del menú
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remover clase active de todos los enlaces
+                document.querySelectorAll('nav a').forEach(link => {
+                    link.classList.remove('active');
+                });
+                
+                // Agregar clase active al enlace clickeado
+                this.classList.add('active');
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 70,
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Animación al hacer scroll
+        const animatedElements = document.querySelectorAll('.animated');
+        
+        function checkScroll() {
+            animatedElements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                }
+            });
+        }
+        
+        // Ejecutar al cargar y al hacer scroll
+        window.addEventListener('load', checkScroll);
+        window.addEventListener('scroll', checkScroll);
+    </script>
+</body>
+</html>
